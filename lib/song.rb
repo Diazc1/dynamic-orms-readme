@@ -8,6 +8,8 @@ class Song
     self.to_s.downcase.pluralize
   end
 
+
+#results_as_hash method - This method says: when a SELECT statement is executed, don't return a database row as an array, return it as a hash with the column names as keys.
   def self.column_names
     DB[:conn].results_as_hash = true
 
